@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:widget_of_de_week_1/view/widget/button.dart';
 
@@ -46,23 +47,32 @@ class CardItem extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 decoration:
                     BoxDecoration(borderRadius: BorderRadius.circular(40)),
-                child: RotationTransition(
-                  turns: const AlwaysStoppedAnimation(15 / 360),
-                  child: Image.asset(
-                    "assets/img/$img",
+                child: AnimatedRotation(
+                  turns: 15 / 360,
+                  duration: const Duration(milliseconds: 500),
+                  child: SlideInRight(
+                    child: Hero(
+                      tag: img,
+                      child: Image.asset(
+                        "assets/img/$img",
+                      ),
+                    ),
                   ),
                 ),
               ),
               const SizedBox(height: 30),
-              Text(
-                preco,
-                style: const TextStyle(
-                  fontSize: 50.0,
-                  fontWeight: FontWeight.bold,
+              SlideInRight(
+                duration: const Duration(milliseconds: 800),
+                child: Text(
+                  preco,
+                  style: const TextStyle(
+                    fontSize: 50.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               const SizedBox(height: 30),
-              Button(onTap: onTap, text: "Add to Cart")
+              Button(onTap: () => onTap, text: "Add to Cart")
             ],
           ),
         )

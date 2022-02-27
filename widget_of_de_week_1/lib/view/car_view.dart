@@ -1,6 +1,8 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:widget_of_de_week_1/model/item.dart';
+import 'package:widget_of_de_week_1/view/view_item_card.dart';
 import 'package:widget_of_de_week_1/view/widget/button.dart';
 import 'package:widget_of_de_week_1/view/widget/card_item.dart';
 import 'package:widget_of_de_week_1/view/widget/line.dart';
@@ -26,7 +28,14 @@ class CarView extends StatelessWidget {
             const SizedBox(height: 20),
             Expanded(
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (ctx) => ViewItemCard(data: data),
+                    ),
+                  );
+                },
                 child: column(context),
               ),
             )

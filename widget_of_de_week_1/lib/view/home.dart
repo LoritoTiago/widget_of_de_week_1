@@ -15,22 +15,28 @@ class _HomeState extends State<Home> {
     ItemModel(
         brand: "n.png",
         img: "nk.png",
-        subtitle: "Adidas é uma marca super top",
+        subtitle:
+            "Nike, Inc. is an American footwear, apparel, and accessories company founded in 1972 by Bill Bowerman and Phillip Knight. Its headquarters are in Beaverton, Oregon, United States."
+                .substring(0, 150),
         title: "Nike",
         cor: Colors.red,
         preco: "\$300.00"),
     ItemModel(
         brand: "a.png",
         img: "ad.png",
-        subtitle: "Adidas é uma marca super top",
+        subtitle:
+            "Adidas is a company founded in Germany. The company is named after its founder, Adolf Dassler, also known by the nickname Adi, who started producing sneakers in the 1920s, together with his brother Rudolf Dassler, in Herzogenaurach, near Nuremberg."
+                .substring(0, 150),
         title: "Addidas",
         cor: Colors.green,
         preco: "\$400.00"),
     ItemModel(
       brand: "r.png",
       img: "rb.png",
-      subtitle: "Adidas é uma marca super top",
-      title: "Rebock",
+      subtitle:
+          "Reebok is an American, originally English, sports equipment company. It was acquired in 2005 by Adidas for \$3.8 billion, but its brand and technology continued to be developed without change."
+              .substring(0, 150),
+      title: "Reebok",
       cor: Colors.yellow,
       preco: "\$600.00",
     ),
